@@ -1,21 +1,16 @@
 import csv
-
 infile = open('sitka_weather_07-2018_simple.csv','r')
-
 csvfile = csv.reader(infile)
-
 header_row = next(csvfile)
 
 print(type(header_row))
 
 for index, column_header in enumerate(header_row):
     print(index, column_header)
-
 highs = []
 
 for row in csvfile:
     highs.append(int(row[5]))
-
 print(highs)
 
 import matplotlib.pyplot as plt
