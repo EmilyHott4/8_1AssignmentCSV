@@ -1,14 +1,9 @@
-# using the datetime module
-# adding the dates to the xaxis for the month of July 2018
+# using the datetime module, adding the dates to the xaxis for the month of July 2018
 import csv
 from datetime import datetime
-
 infile = open('sitka_weather_07-2018_simple.csv','r')
-
 csvfile = csv.reader(infile)
-
 header_row = next(csvfile)
-
 print(type(header_row))
 
 for index, column_header in enumerate(header_row):
